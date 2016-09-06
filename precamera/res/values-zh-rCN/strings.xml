@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">抢拍相机</string>
+    <string name="nowSaving">"摄像中"</string>
+    <string name="recordingSucceeded">拍摄视频成功！</string>
+    <string name="recordingFailed">拍摄视频失败 (err=%1$d)!</string>
+    <string name="selectPreTime">摄像提前拍摄时长</string>
+    <string name="photos_will_not_save">不会保存的照片：</string>
+    <string name="photos_will_save">会保存的照片（↑上划删除）：</string>
+    <string name="isShowPreRecord">显示提前摄像窗口</string>
+    <string name="selectCamera">前后相机选择</string>
+    <string name="preTimeShow">%d秒</string>
+    <string name="settings">设置</string>
+    <string name="gallery_delete_title">删除</string>
+    <string name="gallery_delete_confirm">是否确定删除？</string>
+    <string name="gallery_delete_button">删除</string>
+    <string name="gallery_send_button">分享</string>
+    <string name="gallery_edit_button">编辑</string>
+    <string name="gallery_info_button">信息</string>
+    <string name="fail_dialog_title">失败</string>
+    <string name="fail_dialog_msg">连接相机不成功。\n\n你可以重新打开或重新安装此应用来尝试解决。</string>
+    <string name="fail_dialog_button_quit">退出</string>
+    <string name="fail_dialog_button_report">无法解决，报告问题</string>
+
+    <string-array name="selectCameraOptions">
+        <item>后置相机</item>
+        <item>前置相机</item>
+    </string-array>
+
+    <string-array name="selectPreTimesText">
+        <item>0 秒</item>
+        <item>1 秒</item>
+        <item>3 秒</item>
+        <item>5 秒</item>
+        <item>10 秒</item>
+        <item>20 秒</item>
+        <item>30 秒</item>
+        <item>60 秒</item>
+    </string-array>
+</resources>

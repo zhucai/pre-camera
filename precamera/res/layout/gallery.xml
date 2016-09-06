@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainView"
+    >
+    <com.twinfishlabs.precamera.gallery.PictureScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pictureScrollView"
+        />
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:visibility="invisible"
+        android:padding="4dp"
+        android:background="#55000000"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitle"
+            android:textSize="20sp"
+            android:textColor="#ffffffff"
+            />
+        <View style="@style/BottomSeparatorView"/>
+        <TextView
+            style="@style/GalleryButton"
+            android:id="@+id/btnSend"
+            android:text="@string/gallery_send_button"
+            />
+        <View style="@style/BottomSeparatorView"/>
+        <TextView
+            style="@style/GalleryButton"
+            android:id="@+id/btnDelete"
+            android:text="@string/gallery_delete_button"
+            />
+        <View style="@style/BottomSeparatorView"/>
+    </LinearLayout>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btnPlay"
+        android:src="@drawable/play_button"
+        android:visibility="invisible"
+        android:padding="10dp"
+        android:background="@null"
+        />
+</FrameLayout>

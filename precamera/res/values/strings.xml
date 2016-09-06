@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Early Snap</string>
+    <string name="secondsOfVideo" translatable="false">%1$02d:%2$02d</string>
+    <string name="nowSaving">"REC"</string>
+    <string name="recordingSucceeded">Recorded successfully</string>
+    <string name="recordingFailed">Couldn\'t record (Error %1$d)</string>
+    <string name="selectPreTime">Pre record time</string>
+    <string name="photos_will_not_save">Photos in red area won\’t be saved</string>
+    <string name="photos_will_save">Swipe upward to discard</string>
+    <string name="isShowPreRecord">Show video preview</string>
+    <string name="selectCamera">Switch cameras</string>
+    <string name="preTimeShow">%ds</string>
+    <string name="settings">Settings</string>
+    <string name="fail_dialog_title">Can\’t connect to camera</string>
+    <string name="fail_dialog_msg">Couldn\’t connect to device\’s camera. Try reinstalling this app.</string>
+    <string name="fail_dialog_button_quit">Exit</string>
+    <string name="fail_dialog_button_report">"Report"</string>
+
+    <string name="gallery_delete_title">Delete</string>
+    <string name="gallery_delete_confirm">Delete this photo?</string>
+    <string name="gallery_delete_button">Delete</string>
+    <string name="gallery_send_button">Share</string>
+    <string name="gallery_edit_button">Edit</string>
+    <string name="gallery_info_button">Info</string>
+
+    <string-array name="selectCameraOptions">
+        <item>Rear camera</item>
+        <item>Front camera</item>
+    </string-array>
+
+    <string-array name="selectCameraOptionsValue" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="selectPreTimesText">
+        <item>0s</item>
+        <item>1s</item>
+        <item>3s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>20s</item>
+        <item>30s</item>
+        <item>60s</item>
+    </string-array>
+
+    <string-array name="selectPreTimesValue" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+</resources>

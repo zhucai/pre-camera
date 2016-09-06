@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="CameraType"
+        android:title="@string/selectCamera"
+        android:entries="@array/selectCameraOptions"
+        android:entryValues="@array/selectCameraOptionsValue"
+        android:defaultValue="0"
+        />
+    <ListPreference
+        android:key="PreRecordTime"
+        android:title="@string/selectPreTime"
+        android:entries="@array/selectPreTimesText"
+        android:entryValues="@array/selectPreTimesValue"
+        android:defaultValue="5"
+        />
+    <SwitchPreference
+        android:key="IsShowPreRecord"
+        android:title="@string/isShowPreRecord"
+        android:defaultValue="false"
+        />
+</PreferenceScreen>

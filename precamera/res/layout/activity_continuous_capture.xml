@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".MainActivity" >
+
+    <com.twinfishlabs.precamera.ui.MySurfaceView
+        android:id="@+id/continuousCapture_surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/main_activity_padding"
+	    android:clipChildren="false"
+	    android:clipToPadding="false"
+        >
+	    <TextView
+	        android:id="@+id/txtCapturedTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:text="@string/secondsOfVideo" />
+	    <com.twinfishlabs.precamera.ui.MyTextView
+	        android:id="@+id/recording_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/main_activity_padding"
+            android:gravity="center"
+            android:text="@string/nowSaving"
+	        android:textColor="#00000000"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtDebugMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="130dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:text="D"
+        android:textColor="#FF0000"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_above="@+id/bottomBar"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        <ImageButton
+            android:layout_gravity="left"
+            android:id="@+id/btnLight"
+            android:src="@drawable/light"
+            style="@style/Button"
+            />
+        <ImageButton
+            android:layout_gravity="right"
+            android:id="@+id/btnSettings"
+            android:src="@drawable/settings"
+            style="@style/Button"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+        <View style="@style/BottomSeparatorView" />
+        <ImageButton
+            android:id="@+id/recording_button"
+            style="@style/BottomView"
+            android:src="@drawable/recording_action" />
+        <View android:id="@+id/separatorView2" style="@style/BottomSeparatorView" />
+        <ImageButton
+            android:id="@+id/shoot_button"
+            style="@style/BottomView"
+            android:src="@drawable/shoot_action" />
+        <View android:id="@+id/separatorView3" style="@style/BottomSeparatorView" />
+	    <com.twinfishlabs.precamera.GalleryButton
+            android:id="@+id/gallery_button"
+            style="@style/BottomView"
+            android:src="@drawable/default_gallery_icon" />
+        <View style="@style/BottomSeparatorView" />
+    </LinearLayout>
+
+    <include layout="@layout/taked_pictures_view" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/fullPreviewPicView"
+        android:visibility="invisible"
+        />
+</RelativeLayout>
