@@ -66,7 +66,7 @@ public class GalleryButton extends MyImageView {
 				File imgFile = Utilities.getImgFileFromImgOrVideo(file);
 				Bitmap bmp = Utilities.decode(imgFile.getAbsolutePath(), getInnerWidth(), getInnerHeight(), new Options());
 				if (bmp == null) {
-					Log.d("ZC", "bmp == null£º"+mFilePath);
+					Log.d("ZC", "bmp == nullï¼š"+mFilePath);
 					mFilePath = null;
 					continue;
 				} else {

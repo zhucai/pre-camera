@@ -309,12 +309,12 @@ public class CamcorderManager implements PreviewCallback {
     		return new byte[mPreviewImageSize];
     	}
 
-    	// ÒÑ¾­³öÁĞ¹ıÁË£¬Òò´ËÕâÀï²»ÔÙ³öÁĞ
+    	// å·²ç»å‡ºåˆ—è¿‡äº†ï¼Œå› æ­¤è¿™é‡Œä¸å†å‡ºåˆ—
     	if (mPreviewImageQueue.size() < mPreviewImageBufferCount) {
     		return null;
     	}
 
-    	// »¹ÔÚ±£´æÖĞ£¬ÔİÊ±²»³öÁĞ
+    	// è¿˜åœ¨ä¿å­˜ä¸­ï¼Œæš‚æ—¶ä¸å‡ºåˆ—
     	if (mPreviewImageQueue.peekFirst().mSaving) {
     		return null;
     	}
@@ -409,7 +409,7 @@ public class CamcorderManager implements PreviewCallback {
     	int smallWidth = Utilities.getSmallPictureWidth();
     	byte[] smallYuvData = Caches.getSmallYuvBuffer(smallWidth, smallHeight);
     	mRsManager.scaleDownYuv(previewData.mData, mPreviewTextureWidth, mPreviewTextureHeight,
-    			smallYuvData, smallHeight, smallWidth);  // ¿í¸ßµ÷»»£¬ÕâÀï»¹Î´Ğı×ª
+    			smallYuvData, smallHeight, smallWidth);  // å®½é«˜è°ƒæ¢ï¼Œè¿™é‡Œè¿˜æœªæ—‹è½¬
     	if (DEBUG) logger.addSplit("==== ScaleDownYuv");
 
     	Bitmap smallPicture = Caches.getSmallBitmap(smallWidth, smallHeight, Config.ARGB_8888);
@@ -423,7 +423,7 @@ public class CamcorderManager implements PreviewCallback {
     	TakedPictureData data = new TakedPictureData(smallPicture, file.getAbsolutePath(), isUsed);
     	Message.obtain(mHandler, H.MSG_SEND_THUMBNAIL, data).sendToTarget();
 
-    	// landscape is angle degress 0¡ã
+    	// landscape is angle degress 0Â°
     	int angleDegrees = MainActivity.Instance.mOrientation + 90;
     	if (angleDegrees == 360) angleDegrees = 0;
     	final boolean isLandscape = angleDegrees % 180 == 0;
@@ -448,7 +448,7 @@ public class CamcorderManager implements PreviewCallback {
 	    		previewData.mSaved = true;
 	        	previewData.mSaving = false;
 
-	        	// È«²¿±£´æÍê
+	        	// å…¨éƒ¨ä¿å­˜å®Œ
 	        	if (isLast) {
 	        		mHandler.sendEmptyMessage(H.MSG_PICTURE_SAVE_FINISHED);
 	        	}

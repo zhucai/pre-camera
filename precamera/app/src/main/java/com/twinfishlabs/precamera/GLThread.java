@@ -154,12 +154,12 @@ public class GLThread extends HandlerThread implements OnFrameAvailableListener 
 
 				int borderSize = Utilities.dpToPx(1);
 				GLES20.glViewport(left - borderSize, top - borderSize, width + borderSize * 2, height + borderSize * 2);
-				// TODO: ÔÝÊ±È¡Ïû£¬ÒòÎªÔÚÐ¡Ã×NOTEÉÏ»áµ¼ÖÂFC
+				// TODO: æš‚æ—¶å–æ¶ˆï¼Œå› ä¸ºåœ¨å°ç±³NOTEä¸Šä¼šå¯¼è‡´FC
 //				mColorTexDrawer.drawFrame(0, null);
 
 				GLES20.glViewport(left, top, width, height);
 
-				// ¼õÈ¥1Ãë£¬ÒòÎª¹Ø¼üÖ¡£¨i-frame£©ÊÇ1ÃëÒ»´Î
+				// å‡åŽ»1ç§’ï¼Œå› ä¸ºå…³é”®å¸§ï¼ˆi-frameï¼‰æ˜¯1ç§’ä¸€æ¬¡
 				int currReadThumbnail = mCurrWriteThumbnail + Configs.THUMBNAIL_FPS;
 				if (currReadThumbnail >= mThumbnailTextureIds.length) currReadThumbnail -= mThumbnailTextureIds.length;
 

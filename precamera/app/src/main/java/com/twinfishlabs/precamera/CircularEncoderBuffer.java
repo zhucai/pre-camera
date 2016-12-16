@@ -105,7 +105,7 @@ public class CircularEncoderBuffer {
 
         // head points to the next available node, so grab the previous one
         int beforeHead = (mMetaHead + metaLen - 1) % metaLen;
-        long us = mPacketPtsUsec[beforeHead] - mPacketPtsUsec[mMetaTail] - 1000000; // -1ÊÇÎªÁË¼õÈ¥¹Ø¼üÖ¡£¨i-frame£©
+        long us = mPacketPtsUsec[beforeHead] - mPacketPtsUsec[mMetaTail] - 1000000; // -1æ˜¯ä¸ºäº†å‡å»å…³é”®å¸§ï¼ˆi-frameï¼‰
         return Math.max(us, 0);
     }
 
